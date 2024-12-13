@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bufete de Abogados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" aria-label="Ir al inicio">
+                    <img src="img/icon.png" alt="Bufete de Abogados">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="sobre-nosotros.html">¿Quiénes Somos?</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="asesoria.html">Asesoría</a></li>
+                    <li><a href="equipo-profesional.html">Equipo Profesional</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    <section class="hero">
+        <div class="container">
+            <h1>Bufete de Abogados</h1>
+            <p>Defensa penal especializada y asesoría legal.</p>
+            <a href="sobre-nosotros.html" class="btn-hero">Conoce más</a>
+        </div>
+    </section>
+    <section class="about">
+        <div class="container">
+            <h2>¿Quiénes Somos?</h2>
+            <p>Somos un equipo comprometido con brindar soluciones legales personalizadas y efectivas. Nuestra misión es proteger los intereses de nuestros clientes y ofrecerles la mejor asesoría jurídica.</p>
+            <a href="sobre-nosotros.html" class="btn-more">Leer más</a>
+        </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <h2>Servicios Disponibles</h2>
+            <ul>
+                <li><i class="icon-justice"></i> Defensa Penal</li>
+                <li><i class="icon-advice"></i> Asesoría Legal</li>
+                <li><i class="icon-family-law"></i> Derecho Familiar</li>
+                <li><i class="icon-corporate-law"></i> Derecho Corporativo</li>
+                <li><i class="icon-real-estate"></i> Derecho Inmobiliario</li>
+            </ul>
+            <a href="servicios.html" class="btn-more">Ver más</a>
+        </div>
+    </section>
+    <section class="advisory">
+        <div class="container">
+            <h2>Asesoría</h2>
+            <p>Nuestro equipo está disponible para ofrecer asesorías personalizadas en temas legales de diversas índoles. Contáctanos para más información.</p>
+            <a href="asesoria.html" class="btn-more">Solicitar Asesoría</a>
+        </div>
+    </section>
+    <section class="team">
+        <div class="container">
+            <h2>Equipo Profesional</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="img/juan.jpg" alt="Foto">
+                    <h3>Juan Pérez</h3>
+                    <p>Abogado Penalista</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/maria.jpg" alt="Foto">
+                    <h3>María Gómez</h3>
+                    <p>Asesora Jurídica</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/carlos.jpg" alt="Foto">
+                    <h3>Carlos López</h3>
+                    <p>Especialista en Derecho Corporativo</p>
+                </div>
+            </div>
+            <a href="equipo-profesional.html" class="btn-more">Conocer Equipo</a>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="container">
+            <h2>Información de Contacto</h2>
+            <p>Dirección: Calle Ficticia 123, Ciudad Ejemplo</p>
+            <p>Teléfono: +123 456 789</p>
+            <p>Email: contacto@ingenieroingenuo.com</p>
+            <a href="contacto.html" class="btn-more">Contáctanos</a>
+        </div>
+    </section>
+</main>
+
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        elmnt.innerHTML = this.responseText;
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                elmnt.removeAttribute("w3-include-html");
+            }
+        }
+    }
+    includeHTML();
+</script>
